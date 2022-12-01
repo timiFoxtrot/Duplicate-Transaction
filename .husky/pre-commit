@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Checking for changes to tests or package.json..."
+echo "Do not make any changes to tests or package.json."
+
+git diff --quiet __tests__/duplicates.js
+git diff --quiet package.json
